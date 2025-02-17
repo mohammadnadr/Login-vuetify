@@ -30,9 +30,18 @@ function validate(values: any, {setErrors}: any) {
 
   // Update the username with trimmed value
   username.value = trimmedUsername;
+  return login(trimmedUsername, password.value).catch((error) => setErrors({apiError: error}));
+}
 
-  const authStore = useAuthStore();
-  return authStore.login(trimmedUsername, password.value).catch((error) => setErrors({apiError: error}));
+async function login(username: string, password: string) {
+  // const user = await fetchWrapper.post(`${baseUrl}/authenticate`, { username, password });
+  const user = {username, password}
+  // update pinia state
+  // this.user = user;
+  // store user details and jwt in local storage to keep user logged in between page refreshes
+  localStorage.setItem('user', JSON.stringify(user));
+  // redirect to previous url or default to home page
+  // router.push(this.returnUrl || '/starter');
 }
 </script>
 
@@ -42,7 +51,7 @@ function validate(values: any, {setErrors}: any) {
       Login
     </h3>
     <router-link
-      to="/register1"
+      :to="{name:'Register'}"
       class="text-primary text-decoration-none"
     >
       Don't Have an account?
@@ -117,7 +126,7 @@ function validate(values: any, {setErrors}: any) {
       />
       <div class="ms-auto">
         <router-link
-          to="/forgot-pwd1"
+
           class="text-darkText link-hover"
         >
           Forgot Password?
