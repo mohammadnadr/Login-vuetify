@@ -118,6 +118,13 @@
   "passwordLength": "Password must be less than 10 characters",
   "emailRequired": "E-mail is required",
   "emailSpaces": "E-mail must not contain spaces",
-  "emailValid": "E-mail must be valid"
+  "emailValid": "E-mail must be valid",
+
+  "backToLogin": "Back to Login",
+  "emailLabel": "Email address",
+  "emailPlaceholder": "Enter email address",
+  "checkSpam": "Do not forget to check SPAM box.",
+  "sendPasswordResetEmail": "Send Password Reset Email",
+  "emailNoSpaces": "E-mail must not contain spaces"
 
 }

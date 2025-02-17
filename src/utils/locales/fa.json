@@ -118,5 +118,12 @@
   "passwordLength": "رمز عبور باید کمتر از 10 کاراکتر باشد",
   "emailRequired": "ایمیل الزامی است",
   "emailSpaces": "ایمیل نباید شامل فضاهای خالی باشد",
-  "emailValid": "ایمیل باید معتبر باشد"
+  "emailValid": "ایمیل باید معتبر باشد",
+
+  "backToLogin": "بازگشت به ورود",
+  "emailLabel": "آدرس ایمیل",
+  "emailPlaceholder": "ایمیل را وارد کنید",
+  "checkSpam": "فراموش نکنید به پوشه SPAM هم سر بزنید.",
+  "sendPasswordResetEmail": "ارسال ایمیل تنظیم مجدد رمز عبور",
+  "emailNoSpaces": "ایمیل نباید شامل فضا باشد"
 }
