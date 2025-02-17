@@ -135,5 +135,11 @@
   "createAccount": "ایجاد حساب کاربری",
   "firstNameRequired": "نام الزامی است",
   "lastNameRequired": "نام خانوادگی الزامی است",
-  "passwordTrimSpaces": "رمز عبور نباید با فضا شروع یا خاتمه یابد"
+  "passwordTrimSpaces": "رمز عبور نباید با فضا شروع یا خاتمه یابد",
+
+  "otpSentMessage": "ما کدی به {email} ارسال کرده‌ایم.",
+  "continue": "ادامه",
+  "didNotReceiveEmail": "ایمیل را دریافت نکرده‌اید؟ پوشه اسپم خود را بررسی کنید، یا",
+  "checkSpamFilter": "پوشه اسپم خود را بررسی کنید.",
+  "resendCode": "ارسال مجدد کد"
 }

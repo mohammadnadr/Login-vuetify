@@ -135,7 +135,13 @@
   "createAccount": "Create Account",
   "firstNameRequired": "First Name is required",
   "lastNameRequired": "Last Name is required",
-  "passwordTrimSpaces": "Password cannot start or end with spaces"
+  "passwordTrimSpaces": "Password cannot start or end with spaces",
+
+  "otpSentMessage": "We've sent you a code at {email}.",
+  "continue": "Continue",
+  "didNotReceiveEmail": "Did not receive the email? Check your spam filter, or",
+  "checkSpamFilter": "check your spam filter.",
+  "resendCode": "Resend Code"
 
 
 }

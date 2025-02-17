@@ -135,6 +135,12 @@
   "createAccount": "إنشاء حساب",
   "firstNameRequired": "الاسم الأول مطلوب",
   "lastNameRequired": "الكنية مطلوبة",
-  "passwordTrimSpaces": "يجب ألا تبدأ أو تنتهي كلمة المرور بمسافات"
+  "passwordTrimSpaces": "يجب ألا تبدأ أو تنتهي كلمة المرور بمسافات",
+
+  "otpSentMessage": "لقد أرسلنا لك رمزًا إلى {email}.",
+  "continue": "استمر",
+  "didNotReceiveEmail": "هل لم تستلم البريد الإلكتروني؟ تحقق من مجلد البريد العشوائي الخاص بك، أو",
+  "checkSpamFilter": "تحقق من مجلد البريد العشوائي.",
+  "resendCode": "إعادة إرسال الرمز"
 
 }

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 
+const { t } = useI18n(); // دسترسی به تابع t برای ترجمه
 const valid = ref(false);
 const logform = ref();
 const otp = ref('');
@@ -8,7 +10,7 @@ const otp = ref('');
 
 <template>
   <p class="text-h6 my-6">
-    We’ve send you code on jone.****@company.com
+    {{ t('otpSentMessage', { email: 'jone.****@company.com' }) }}
   </p>
   <v-form
     ref="logform"
@@ -32,12 +34,13 @@ const otp = ref('');
       size="large"
       type="submit"
     >
-      Continue
+      {{ t('continue') }}
     </v-btn>
   </v-form>
   <div class="d-sm-flex align-start justify-space-between mt-6">
     <div class="text-subtitle-1 font-weight-regular">
-      Did not receive the email? Check your spam filter, or
+      {{ t('didNotReceiveEmail') }}
+      <span class="font-weight-bold">{{ t('checkSpamFilter') }}</span>
     </div>
     <v-btn
       variant="text"
@@ -45,7 +48,7 @@ const otp = ref('');
       to="/#"
       class="text-capitalize mr-n2 mt-2 mt-sm-0"
     >
-      Resend Code
+      {{ t('resendCode') }}
     </v-btn>
   </div>
 </template>

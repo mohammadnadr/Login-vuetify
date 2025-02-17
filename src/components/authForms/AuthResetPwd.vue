@@ -29,7 +29,14 @@ function validate() {
 </script>
 
 <template>
-  <v-form ref="logform" lazy-validation v-model="valid" action="/starter" @submit.prevent="validate" class="mt-7 loginForm">
+  <v-form
+    ref="logform"
+    v-model="valid"
+    lazy-validation
+    action="/starter"
+    class="mt-7 loginForm"
+    @submit.prevent="validate"
+  >
     <div class="mb-6">
       <v-label>Password</v-label>
       <v-text-field
@@ -43,10 +50,23 @@ function validate() {
         :type="show1 ? 'text' : 'password'"
         class="mt-2 mb-4"
       >
-        <template v-slot:append-inner>
-          <v-btn color="secondary" icon rounded variant="text">
-            <EyeInvisibleOutlined :style="{ color: 'rgb(var(--v-theme-secondary))' }" v-if="show1 == false" @click="show1 = !show1" />
-            <EyeOutlined :style="{ color: 'rgb(var(--v-theme-secondary))' }" v-if="show1 == true" @click="show1 = !show1" />
+        <template #append-inner>
+          <v-btn
+            color="secondary"
+            icon
+            rounded
+            variant="text"
+          >
+            <EyeInvisibleOutlined
+              v-if="show1 == false"
+              :style="{ color: 'rgb(var(--v-theme-secondary))' }"
+              @click="show1 = !show1"
+            />
+            <EyeOutlined
+              v-if="show1 == true"
+              :style="{ color: 'rgb(var(--v-theme-secondary))' }"
+              @click="show1 = !show1"
+            />
           </v-btn>
         </template>
       </v-text-field>
@@ -62,9 +82,19 @@ function validate() {
         color="primary"
         hide-details="auto"
         class="mt-2"
-      ></v-text-field>
+      />
     </div>
-    <v-btn color="primary" block class="mt-5" variant="flat" size="large" :disabled="!valid" type="submit">Reset Password </v-btn>
+    <v-btn
+      color="primary"
+      block
+      class="mt-5"
+      variant="flat"
+      size="large"
+      :disabled="!valid"
+      type="submit"
+    >
+      Reset Password
+    </v-btn>
   </v-form>
 </template>
 <style lang="scss">
