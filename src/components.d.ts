@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AppFooter: typeof import('./components/layouts/AppFooter.vue')['default']
+    AppHeader: typeof import('./components/layouts/AppHeader.vue')['default']
     AuthCheckMail: typeof import('./components/authForms/AuthCheckMail.vue')['default']
     AuthCodeVerification: typeof import('./components/authForms/AuthCodeVerification.vue')['default']
     AuthForgotPwd: typeof import('./components/authForms/AuthForgotPwd.vue')['default']
