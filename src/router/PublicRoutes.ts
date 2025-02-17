@@ -25,11 +25,11 @@ const PublicRoutes = {
       path: '/register',
       component: () => import('@/pages/auth/RegisterPage.vue')
     },
-    // {
-    //   name: 'Forgot Password',
-    //   path: '/forgot-pwd',
-    //   component: () => import('@/views/authentication/auth/ForgotPwd.vue')
-    // },
+    {
+      name: 'Forgot Password',
+      path: '/forgot-password',
+      component: () => import('@/pages/auth/ForgotPwd.vue')
+    },
     // {
     //   name: 'Check Mail',
     //   path: '/check-mail',

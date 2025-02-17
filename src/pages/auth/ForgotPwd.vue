@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import AuthLogin from '@/components/authForms/AuthLogin.vue';
+import AuthForgotPwd from '@/components/authForms/AuthForgotPwd.vue';
 </script>
 
 <template>
   <v-row
+    class="bg-containerBg position-relative"
     no-gutters
   >
     <v-col cols="12">
@@ -11,10 +12,9 @@ import AuthLogin from '@/components/authForms/AuthLogin.vue';
         LOGO
       </div>
     </v-col>
-    <!---Login Part-->
+    <!---Forgot pwd Part-->
     <v-col
       cols="12"
-      lg="12"
       class="d-flex align-center"
     >
       <v-container>
@@ -25,17 +25,15 @@ import AuthLogin from '@/components/authForms/AuthLogin.vue';
           <v-row justify="center">
             <v-col
               cols="12"
-              md="12"
+              lg="12"
             >
               <v-card
                 elevation="0"
                 class="loginBox"
               >
                 <v-card elevation="24">
-                  <v-card-text class="pa-sm-10 pa-6">
-                    <!---Login Form-->
-                    <AuthLogin />
-                    <!---Login Form-->
+                  <v-card-text class="pa-sm-10 pa-4">
+                    <AuthForgotPwd />
                   </v-card-text>
                 </v-card>
               </v-card>

@@ -73,7 +73,6 @@ async function login(username: string, password: string) {
         hide-details="auto"
         variant="outlined"
         color="primary"
-        @input="username"
       />
     </div>
     <div>
@@ -88,7 +87,6 @@ async function login(username: string, password: string) {
         hide-details="auto"
         :type="show ? 'text' : 'password'"
         class="mt-2"
-        @input="password"
       >
         <template #append-inner>
           <v-btn
@@ -126,7 +124,7 @@ async function login(username: string, password: string) {
       />
       <div class="ms-auto">
         <router-link
-
+          :to="{name:'Forgot Password'}"
           class="text-darkText link-hover"
         >
           Forgot Password?
