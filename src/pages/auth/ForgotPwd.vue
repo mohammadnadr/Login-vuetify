@@ -23,8 +23,8 @@ import AuthForgotPwd from '@/components/authForms/AuthForgotPwd.vue';
               cols="12"
               lg="12"
             >
-              <v-card
-                elevation="0"
+               <v-card
+                elevation="12"
                 class="loginBox"
               >
                 <v-card elevation="24">

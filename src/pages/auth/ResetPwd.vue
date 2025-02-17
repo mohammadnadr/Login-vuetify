@@ -20,8 +20,8 @@ import AuthResetPwd from '@/components/authForms/AuthResetPwd.vue';
         >
           <v-row justify="center">
             <v-col cols="12">
-              <v-card
-                elevation="0"
+               <v-card
+                elevation="12"
                 class="loginBox"
               >
                 <v-card elevation="24">

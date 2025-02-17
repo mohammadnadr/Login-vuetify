@@ -18,7 +18,7 @@ function changeLocale(item) {
 </script>
 
 <template>
-  <v-app-bar :elevation="1">
+  <v-app-bar :elevation="1" class="px-5">
     <!--    <v-app-bar-title>-->
     <!--      LOGO-->
     <!--    </v-app-bar-title>-->
@@ -41,7 +41,7 @@ function changeLocale(item) {
             class="ms-sm-2 ms-1"
             color="darkText"
             rounded="sm"
-            size="small"
+
             v-bind="props"
           >
             <v-icon icon="mdi-translate" />
