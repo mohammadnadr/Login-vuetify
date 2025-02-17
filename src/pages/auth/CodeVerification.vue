@@ -4,11 +4,6 @@ import AuthCodeVerification from '@/components/authForms/AuthCodeVerification.vu
 
 <template>
   <v-row no-gutters>
-    <v-col cols="12">
-      <div class="pt-6 ps-6">
-        {{ $t('test') }}
-      </div>
-    </v-col>
     <!---Code verification Part-->
     <v-col
       cols="12"

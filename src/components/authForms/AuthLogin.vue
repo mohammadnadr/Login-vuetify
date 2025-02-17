@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import {ref} from 'vue';
 import {Form} from 'vee-validate';
+import axios from "axios";
 
 
 const checkbox = ref(false);
@@ -35,8 +36,10 @@ function validate(values: any, {setErrors}: any) {
 }
 
 async function login(username: string, password: string) {
-  // const user = await fetchWrapper.post(`${baseUrl}/authenticate`, { username, password });
+
   const user = {username, password}
+  const {data} = await axios.get('')
+  console.log(data);
   // update pinia state
   // this.user = user;
   // store user details and jwt in local storage to keep user logged in between page refreshes
