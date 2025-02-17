@@ -1,11 +1,20 @@
 <script setup lang="ts">
 import {shallowRef} from 'vue';
+import {useAppStore} from "@/stores/app";
 
+const store = useAppStore();
 const languageDD = shallowRef([
   {title: 'English', subtext: 'UK', value: 'en'},
   {title: 'Persian', subtext: 'فارسی', value: 'fa'},
   {title: 'arabic', subtext: 'عربی', value: 'ar'}
 ]);
+
+function changeLocale(item) {
+
+  if (item.value === 'en') store.isRTL(false)
+  else store.isRTL(true)
+
+}
 </script>
 
 <template>
@@ -27,7 +36,7 @@ const languageDD = shallowRef([
             size="small"
             v-bind="props"
           >
-            <v-icon icon="mdi-translate" />
+            <v-icon icon="mdi-translate"/>
           </v-btn>
         </template>
         <v-sheet
@@ -44,8 +53,12 @@ const languageDD = shallowRef([
               :key="index"
               color="primary"
               :active="$i18n.locale == item.value"
+              :value="index"
               class="d-flex align-center"
-              @click="() => ($i18n.locale = item.value)"
+              @click="()=>{
+                $i18n.locale = item.value
+                changeLocale(item)
+              }"
             >
               <v-list-item-title class="text-subtitle-1 font-weight-regular">
                 {{ item.title }}
