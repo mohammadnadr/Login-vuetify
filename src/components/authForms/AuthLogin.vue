@@ -2,6 +2,7 @@
 import {ref} from 'vue';
 import {Form} from 'vee-validate';
 
+
 const checkbox = ref(false);
 const valid = ref(false);
 const show = ref(false);
@@ -9,18 +10,18 @@ const password = ref('admin123');
 const username = ref('info@codedthemes.com');
 // Password validation rules
 const passwordRules = ref([
-  (v: string) => !!v || 'Password is required',
-  (v: string) => v === v.trim() || 'Password cannot start or end with spaces',
-  (v: string) => v.length <= 10 || 'Password must be less than 10 characters'
+  (v: string) => !!v || $t('passwordRequired'),
+  (v: string) => v === v.trim() || t('passwordSpaces'),
+  (v: string) => v.length <= 10 || t('passwordLength')
 ]);
 // Email validation rules
 const emailRules = ref([
-  (v: string) => !!v.trim() || 'E-mail is required',
+  (v: string) => !!v.trim() || t('emailRequired'),
   (v: string) => {
     const trimmedEmail = v.trim();
-    return !/\s/.test(trimmedEmail) || 'E-mail must not contain spaces';
+    return !/\s/.test(trimmedEmail) || t('emailSpaces');
   },
-  (v: string) => /.+@.+\..+/.test(v.trim()) || 'E-mail must be valid'
+  (v: string) => /.+@.+\..+/.test(v.trim()) || t('emailValid')
 ]);
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -48,13 +49,13 @@ async function login(username: string, password: string) {
 <template>
   <div class="d-flex justify-space-between align-center">
     <h3 class="text-h3 text-center mb-0">
-      Login
+      {{ $t('login') }}
     </h3>
     <router-link
       :to="{name:'Register'}"
       class="text-primary text-decoration-none"
     >
-      Don't Have an account?
+      {{ $t('dontHaveAccount') }}
     </router-link>
   </div>
   <Form
@@ -63,10 +64,10 @@ async function login(username: string, password: string) {
     @submit="validate"
   >
     <div class="mb-6">
-      <v-label>Email Address</v-label>
+      <v-label>{{ $t('emailAddress') }}</v-label>
       <v-text-field
         v-model="username"
-        aria-label="email address"
+        aria-label="email"
         :rules="emailRules"
         class="mt-2"
         required
@@ -76,7 +77,7 @@ async function login(username: string, password: string) {
       />
     </div>
     <div>
-      <v-label>Password</v-label>
+      <v-label>{{ $t('password') }}</v-label>
       <v-text-field
         v-model="password"
         aria-label="password"
@@ -116,7 +117,7 @@ async function login(username: string, password: string) {
       <v-checkbox
         v-model="checkbox"
         :rules="[(v: any) => !!v || 'You must agree to continue!']"
-        label="Keep me sign in"
+        :label="$t('keepMeSignedIn')"
         required
         color="primary"
         class="ms-n2"
@@ -127,7 +128,7 @@ async function login(username: string, password: string) {
           :to="{name:'Forgot Password'}"
           class="text-darkText link-hover"
         >
-          Forgot Password?
+          {{ $t('forgotPassword') }}
         </router-link>
       </div>
     </div>
@@ -141,7 +142,7 @@ async function login(username: string, password: string) {
       :disabled="valid"
       type="submit"
     >
-      Login
+      {{ $t('login') }}
     </v-btn>
     <div
       v-if="errors.apiError"

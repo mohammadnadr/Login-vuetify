@@ -104,6 +104,20 @@
   "Sample Page": "Sample Page",
   "Documentation": "Documentation",
   "Road Map": "Road Map",
-  "test": "test"
+
+  "login": "Login",
+  "dontHaveAccount": "Don't Have an account?",
+  "emailAddress": "Email Address",
+  "password": "Password",
+  "keepMeSignedIn": "Keep me sign in",
+  "forgotPassword": "Forgot Password?",
+  "loginButton": "Login",
+  "apiError": "An error occurred. Please try again.",
+  "passwordRequired": "Password is required",
+  "passwordSpaces": "Password cannot start or end with spaces",
+  "passwordLength": "Password must be less than 10 characters",
+  "emailRequired": "E-mail is required",
+  "emailSpaces": "E-mail must not contain spaces",
+  "emailValid": "E-mail must be valid"
 
 }

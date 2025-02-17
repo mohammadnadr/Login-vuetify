@@ -104,5 +104,19 @@
   "Sample Page": "صفحه نمونه",
   "Documentation": "مستندات",
   "Road Map": "نقشه راه",
-  "test": "تست"
+
+  "login": "ورود",
+  "dontHaveAccount": "حساب ندارید؟",
+  "emailAddress": "آدرس ایمیل",
+  "password": "رمز عبور",
+  "keepMeSignedIn": "مرا در حالت ورود نگه‌دار",
+  "forgotPassword": "رمز عبور را فراموش کرده‌ام؟",
+  "loginButton": "ورود",
+  "apiError": "خطایی رخ داد. لطفاً دوباره تلاش کنید.",
+  "passwordRequired": "رمز عبور الزامی است",
+  "passwordSpaces": "رمز عبور نمی‌تواند با فضای خالی شروع یا تمام شود",
+  "passwordLength": "رمز عبور باید کمتر از 10 کاراکتر باشد",
+  "emailRequired": "ایمیل الزامی است",
+  "emailSpaces": "ایمیل نباید شامل فضاهای خالی باشد",
+  "emailValid": "ایمیل باید معتبر باشد"
 }

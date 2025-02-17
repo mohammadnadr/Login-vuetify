@@ -103,5 +103,20 @@
   "Disabled Menu": "القائمة المعطلة",
   "Sample Page": "صفحة عينة",
   "Documentation": "الوثائق",
-  "Road Map": "خارطة الطريق"
+  "Road Map": "خارطة الطريق",
+
+  "login": "تسجيل الدخول",
+  "dontHaveAccount": "ليس لديك حساب؟",
+  "emailAddress": "عنوان البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "keepMeSignedIn": "ابقني مسجلاً للدخول",
+  "forgotPassword": "نسيت كلمة المرور؟",
+  "loginButton": "تسجيل الدخول",
+  "apiError": "حدث خطأ. يرجى المحاولة مرة أخرى.",
+  "passwordRequired": "كلمة المرور مطلوبة",
+  "passwordSpaces": "لا يمكن أن تبدأ أو تنتهي كلمة المرور بمسافات",
+  "passwordLength": "يجب أن تكون كلمة المرور أقل من 10 أحرف",
+  "emailRequired": "البريد الإلكتروني مطلوب",
+  "emailSpaces": "يجب ألا يحتوي البريد الإلكتروني على مسافات",
+  "emailValid": "يجب أن يكون البريد الإلكتروني صالحًا"
 }
