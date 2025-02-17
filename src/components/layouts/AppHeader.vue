@@ -8,17 +8,21 @@ const languageDD = shallowRef([
   {title: 'Persian', subtext: 'فارسی', value: 'fa'},
   {title: 'arabic', subtext: 'عربی', value: 'ar'}
 ]);
-function changeLocale(item) {
 
+function changeLocale(item) {
+  store.setLocale(item.value)
   if (item.value === 'en') store.isRTL(false)
   else store.isRTL(true)
-
 }
+
 
 </script>
 
 <template>
-  <v-app-bar :elevation="1" class="px-5">
+  <v-app-bar
+    :elevation="1"
+    class="px-5"
+  >
     <!--    <v-app-bar-title>-->
     <!--      LOGO-->
     <!--    </v-app-bar-title>-->
