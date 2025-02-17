@@ -9,24 +9,24 @@ const { t } = useI18n(); // دسترسی به تابع t برای ترجمه
   <v-row no-gutters>
     <!---Code verification Part-->
     <v-col
-        cols="12"
-        class="d-flex align-center"
+      cols="12"
+      class="d-flex align-center"
     >
       <v-container>
         <div
-            class="d-flex align-center justify-center"
-            style="min-height: calc(100vh - 148px)"
+          class="d-flex align-center justify-center"
+          style="min-height: calc(100vh - 148px)"
         >
           <v-row justify="center">
             <v-col
-                cols="12"
-                lg="10"
-                xl="6"
-                md="7"
+              cols="12"
+              lg="10"
+              xl="6"
+              md="7"
             >
               <v-card
-                  elevation="0"
-                  class="loginBox"
+                elevation="0"
+                class="loginBox"
               >
                 <v-card elevation="24">
                   <v-card-text class="pa-sm-9 pa-6">

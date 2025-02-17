@@ -7,7 +7,6 @@ import AuthRegister from '@/components/authForms/AuthRegister.vue';
 
     no-gutters
   >
-
     <!---Register Part-->
     <v-col
       cols="12"
@@ -24,7 +23,7 @@ import AuthRegister from '@/components/authForms/AuthRegister.vue';
               cols="12"
               md="12"
             >
-               <v-card
+              <v-card
                 elevation="12"
                 class="loginBox"
               >

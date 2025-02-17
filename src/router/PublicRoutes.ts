@@ -31,6 +31,12 @@ const PublicRoutes = {
       path: '/forgot-password',
       component: () => import('@/pages/auth/ForgotPwd.vue')
     },
+
+    {
+      name: 'Reset Password',
+      path: '/reset-pwd',
+      component: () => import('@/pages/auth/ResetPwd.vue')
+    },
     // {
     //   name: 'Check Mail',
     //   path: '/check-mail',

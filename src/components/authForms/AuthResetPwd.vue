@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-// icons
-import { EyeInvisibleOutlined, EyeOutlined } from '@ant-design/icons-vue';
+import {useI18n} from "vue-i18n";
+
+const { t } = useI18n(); // دسترسی به تابع t برای ترجمه
 
 const valid = ref(false);
 const logform = ref();
 const password = ref('');
 const conpassword = ref('');
-const show1 = ref(false);
+const show = ref(false);
 const passwordRules = ref([
   (v: string) => !!v || 'Password is required',
   (v: string) => (v && v.length <= 10) || 'Password must be less than 10 characters'
@@ -38,7 +39,7 @@ function validate() {
     @submit.prevent="validate"
   >
     <div class="mb-6">
-      <v-label>Password</v-label>
+      <v-label>{{ t('password') }}</v-label>
       <v-text-field
         v-model="password"
         :rules="passwordRules"
@@ -47,7 +48,7 @@ function validate() {
         variant="outlined"
         color="primary"
         hide-details="auto"
-        :type="show1 ? 'text' : 'password'"
+        :type="show ? 'text' : 'password'"
         class="mt-2 mb-4"
       >
         <template #append-inner>
@@ -57,15 +58,17 @@ function validate() {
             rounded
             variant="text"
           >
-            <EyeInvisibleOutlined
-              v-if="show1 == false"
+            <v-icon
+              v-if="show == false"
+              icon="mdi-eye"
               :style="{ color: 'rgb(var(--v-theme-secondary))' }"
-              @click="show1 = !show1"
+              @click="show = !show"
             />
-            <EyeOutlined
-              v-if="show1 == true"
+            <v-icon
+              v-if="show == true"
+              icon="mdi-eye-closed"
               :style="{ color: 'rgb(var(--v-theme-secondary))' }"
-              @click="show1 = !show1"
+              @click="show = !show"
             />
           </v-btn>
         </template>

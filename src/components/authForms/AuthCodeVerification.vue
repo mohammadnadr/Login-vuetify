@@ -1,22 +1,30 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useI18n } from 'vue-i18n';
+import {ref} from 'vue';
+import {useI18n} from 'vue-i18n';
+import {useRouter} from "vue-router";
 
-const { t } = useI18n(); // دسترسی به تابع t برای ترجمه
+const router = useRouter();
+const {t} = useI18n(); // دسترسی به تابع t برای ترجمه
+
 const valid = ref(false);
 const logform = ref();
 const otp = ref('');
+
+function checkOTP() {
+  router.push({name: 'Reset Password'})
+}
 </script>
 
 <template>
   <p class="text-h6 my-6">
-    {{ t('otpSentMessage', { email: 'jone.****@company.com' }) }}
+    {{ t('otpSentMessage', {email: 'jone.****@company.com'}) }}
   </p>
   <v-form
     ref="logform"
     v-model="valid"
     lazy-validation
     class="mt-7 loginForm"
+    @submit.prevent="checkOTP()"
   >
     <v-otp-input
       v-model="otp"
@@ -57,10 +65,12 @@ const otp = ref('');
 .loginForm {
   .v-otp-input {
     padding: 0;
+
     .v-otp-input__content {
       max-width: 100%;
       padding: 0;
     }
+
     .v-otp-input__field {
       font-size: 13px;
     }
