@@ -139,7 +139,7 @@
 
   "otpSentMessage": "We've sent you a code at {email}.",
   "continue": "Continue",
-  "didNotReceiveEmail": "Did not receive the email? Check your spam filter, or",
+  "didNotReceiveEmail": "Did not receive the email?",
   "checkSpamFilter": "check your spam filter.",
   "resendCode": "Resend Code"
 
