@@ -141,6 +141,9 @@
   "continue": "استمر",
   "didNotReceiveEmail": "هل لم تستلم البريد الإلكتروني؟ ",
   "checkSpamFilter": "تحقق من مجلد البريد العشوائي.",
-  "resendCode": "إعادة إرسال الرمز"
+  "resendCode": "إعادة إرسال الرمز",
+
+  "enterVerificationCode": "أدخل رمز التحقق",
+  "verificationCodeMessage": "لقد أرسلنا لك رمزًا عبر البريد الإلكتروني."
 
 }

@@ -141,5 +141,8 @@
   "continue": "ادامه",
   "didNotReceiveEmail": "ایمیل را دریافت نکرده‌اید؟",
   "checkSpamFilter": "پوشه اسپم خود را بررسی کنید.",
-  "resendCode": "ارسال مجدد کد"
+  "resendCode": "ارسال مجدد کد",
+
+  "enterVerificationCode": "وارد کردن کد تأیید",
+  "verificationCodeMessage": "ما کدی را از طریق ایمیل برای شما ارسال کرده‌ایم."
 }

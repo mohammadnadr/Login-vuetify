@@ -141,7 +141,10 @@
   "continue": "Continue",
   "didNotReceiveEmail": "Did not receive the email?",
   "checkSpamFilter": "check your spam filter.",
-  "resendCode": "Resend Code"
+  "resendCode": "Resend Code",
+
+  "enterVerificationCode": "Enter Verification Code",
+  "verificationCodeMessage": "We sent you a code via email."
 
 
 }
