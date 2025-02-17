@@ -109,7 +109,7 @@
   "dontHaveAccount": "حساب ندارید؟",
   "emailAddress": "آدرس ایمیل",
   "password": "رمز عبور",
-  "keepMeSignedIn": "مرا در حالت ورود نگه‌دار",
+  "keepMeSignedIn": "فراموش نکن",
   "forgotPassword": "رمز عبور را فراموش کرده‌ام؟",
   "loginButton": "ورود",
   "apiError": "خطایی رخ داد. لطفاً دوباره تلاش کنید.",

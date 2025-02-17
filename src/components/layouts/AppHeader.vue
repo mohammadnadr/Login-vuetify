@@ -8,18 +8,26 @@ const languageDD = shallowRef([
   {title: 'Persian', subtext: 'فارسی', value: 'fa'},
   {title: 'arabic', subtext: 'عربی', value: 'ar'}
 ]);
-
 function changeLocale(item) {
 
   if (item.value === 'en') store.isRTL(false)
   else store.isRTL(true)
 
 }
+
 </script>
 
 <template>
   <v-app-bar :elevation="1">
-    <v-app-bar-title>LOGO</v-app-bar-title>
+    <!--    <v-app-bar-title>-->
+    <!--      LOGO-->
+    <!--    </v-app-bar-title>-->
+    <template #prepend>
+      <v-img
+        src="/logoLms.svg"
+        width="64"
+      />
+    </template>
 
     <template #append>
       <v-menu
@@ -36,7 +44,7 @@ function changeLocale(item) {
             size="small"
             v-bind="props"
           >
-            <v-icon icon="mdi-translate"/>
+            <v-icon icon="mdi-translate" />
           </v-btn>
         </template>
         <v-sheet

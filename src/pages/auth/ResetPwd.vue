@@ -7,11 +7,7 @@ import AuthResetPwd from '@/components/authForms/AuthResetPwd.vue';
     class="bg-containerBg position-relative"
     no-gutters
   >
-    <v-col cols="12">
-      <div class="pt-6 ps-6">
-        LOGO
-      </div>
-    </v-col>
+
     <!---Reset pwd Part-->
     <v-col
       cols="12"

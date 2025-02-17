@@ -7,11 +7,7 @@ import AuthRegister from '@/components/authForms/AuthRegister.vue';
 
     no-gutters
   >
-    <v-col cols="12">
-      <div class="pt-6 ps-6">
-        LOGO
-      </div>
-    </v-col>
+
     <!---Register Part-->
     <v-col
       cols="12"

@@ -1,6 +1,6 @@
 <template>
   <v-locale-provider :rtl="store.rtl">
-    <v-app style="direction: rtl">
+    <v-app >
       <router-view />
     </v-app>
   </v-locale-provider>

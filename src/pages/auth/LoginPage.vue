@@ -6,11 +6,7 @@ import AuthLogin from '@/components/authForms/AuthLogin.vue';
   <v-row
     no-gutters
   >
-    <v-col cols="12">
-      <div class="pt-6 ps-6">
-        LOGO
-      </div>
-    </v-col>
+
     <!---Login Part-->
     <v-col
       cols="12"
@@ -34,7 +30,7 @@ import AuthLogin from '@/components/authForms/AuthLogin.vue';
                 <v-card elevation="24">
                   <v-card-text class="pa-sm-10 pa-6">
                     <!---Login Form-->
-                    <AuthLogin />
+                    <AuthLogin/>
                     <!---Login Form-->
                   </v-card-text>
                 </v-card>
