@@ -20,6 +20,7 @@ const PublicRoutes = {
       path: '/login',
       component: () => import('@/pages/auth/LoginPage.vue')
     },
+
     {
       name: 'Register',
       path: '/register',
@@ -40,11 +41,12 @@ const PublicRoutes = {
       path: '/reset-pwd',
       component: () => import('@/pages/auth/ResetPwd.vue')
     },
-    // {
-    //   name: 'Code Verification',
-    //   path: '/code-verify',
-    //   component: () => import('@/pages/auth/CodeVerification.vue')
-    // },
+    {
+      name: 'Code Verification',
+      path: '/code-verify',
+      component: () => import('@/pages/auth/CodeVerification.vue')
+    },
+
     {
       name: 'Error 404',
       path: '/error',
