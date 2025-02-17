@@ -1,28 +1,32 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 
+const { t } = useI18n(); // دسترسی به تابع t برای ترجمه
 const show = ref(false);
 const password = ref('');
 const email = ref('');
 const Regform = ref();
 const firstname = ref('');
 const lastname = ref('');
+
 // Password validation rules
 const passwordRules = ref([
-  (v: string) => !!v || 'Password is required',
-  (v: string) => v === v.trim() || 'Password cannot start or end with spaces',
-  (v: string) => v.length <= 10 || 'Password must be less than 10 characters'
+  (v: string) => !!v || t('passwordRequired'),
+  (v: string) => v === v.trim() || t('passwordTrimSpaces'),
+  (v: string) => v.length <= 10 || t('passwordLength')
 ]);
-const firstRules = ref([(v: string) => !!v || 'First Name is required']);
-const lastRules = ref([(v: string) => !!v || 'Last Name is required']);
+const firstRules = ref([(v: string) => !!v || t('firstNameRequired')]);
+const lastRules = ref([(v: string) => !!v || t('lastNameRequired')]);
+
 // Email validation rules
 const emailRules = ref([
-  (v: string) => !!v.trim() || 'E-mail is required',
+  (v: string) => !!v.trim() || t('emailRequired'),
   (v: string) => {
     const trimmedEmail = v.trim();
-    return !/\s/.test(trimmedEmail) || 'E-mail must not contain spaces';
+    return !/\s/.test(trimmedEmail) || t('emailNoSpaces');
   },
-  (v: string) => /.+@.+\..+/.test(v.trim()) || 'E-mail must be valid'
+  (v: string) => /.+@.+\..+/.test(v.trim()) || t('emailValid')
 ]);
 
 function validate() {
@@ -34,13 +38,13 @@ function validate() {
 <template>
   <div class="d-flex justify-space-between align-center">
     <h3 class="text-h3 text-center mb-0">
-      Sign up
+      {{ t('signUp') }}
     </h3>
     <router-link
-      :to="{name:'Login'}"
+      :to="{ name: 'Login' }"
       class="text-primary text-decoration-none"
     >
-      Already have an account?
+      {{ t('alreadyHaveAccount') }}
     </router-link>
   </div>
   <v-form
@@ -55,7 +59,7 @@ function validate() {
         class="py-0"
       >
         <div class="mb-6">
-          <v-label>First Name*</v-label>
+          <v-label>{{ t('firstName') }}</v-label>
           <v-text-field
             v-model="firstname"
             :rules="firstRules"
@@ -64,7 +68,7 @@ function validate() {
             variant="outlined"
             class="mt-2"
             color="primary"
-            placeholder="John"
+            :placeholder="t('firstName')"
           />
         </div>
       </v-col>
@@ -74,7 +78,7 @@ function validate() {
         class="py-0"
       >
         <div class="mb-6">
-          <v-label>Last Name*</v-label>
+          <v-label>{{ t('lastName') }}</v-label>
           <v-text-field
             v-model="lastname"
             :rules="lastRules"
@@ -83,37 +87,36 @@ function validate() {
             variant="outlined"
             class="mt-2"
             color="primary"
-            placeholder="Doe"
+            :placeholder="t('lastName')"
           />
         </div>
       </v-col>
     </v-row>
     <div class="mb-6">
-      <v-label>Company</v-label>
+      <v-label>{{ t('company') }}</v-label>
       <v-text-field
         hide-details="auto"
         variant="outlined"
         class="mt-2"
         color="primary"
-        placeholder="Demo Inc."
+        :placeholder="t('company')"
       />
     </div>
     <div class="mb-6">
-      <v-label>Email Address*</v-label>
+      <v-label>{{ t('emailAddress') }}</v-label>
       <v-text-field
         v-model="email"
         :rules="emailRules"
-        placeholder="demo@company.com"
+        :placeholder="t('emailAddress')"
         class="mt-2"
         required
         hide-details="auto"
         variant="outlined"
         color="primary"
-        @input="email"
       />
     </div>
     <div class="mb-6">
-      <v-label>Password</v-label>
+      <v-label>{{ t('password') }}</v-label>
       <v-text-field
         v-model="password"
         :rules="passwordRules"
@@ -124,7 +127,6 @@ function validate() {
         hide-details="auto"
         :type="show ? 'text' : 'password'"
         class="mt-2"
-        @input="password"
       >
         <template #append-inner>
           <v-btn
@@ -132,18 +134,17 @@ function validate() {
             icon
             rounded
             variant="text"
+            @click="show = !show"
           >
             <v-icon
-              v-if="show == false"
+              v-if="!show"
               icon="mdi-eye"
               :style="{ color: 'rgb(var(--v-theme-secondary))' }"
-              @click="show = !show"
             />
             <v-icon
-              v-if="show == true"
+              v-if="show"
               icon="mdi-eye-closed"
               :style="{ color: 'rgb(var(--v-theme-secondary))' }"
-              @click="show = !show"
             />
           </v-btn>
         </template>
@@ -158,10 +159,11 @@ function validate() {
       size="large"
       @click="validate()"
     >
-      Create Account
+      {{ t('createAccount') }}
     </v-btn>
   </v-form>
 </template>
+
 <style lang="scss">
 .loginForm {
   .v-field--appended {

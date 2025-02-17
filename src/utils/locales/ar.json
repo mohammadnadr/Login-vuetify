@@ -125,5 +125,16 @@
   "emailPlaceholder": "أدخل عنوان البريد الإلكتروني",
   "checkSpam": "لا تنسى التحقق من صندوق الرسائل غير المرغوب فيها.",
   "sendPasswordResetEmail": "إرسال بريد إلكتروني لإعادة تعيين كلمة المرور",
-  "emailNoSpaces": "يجب ألا يحتوي البريد الإلكتروني على مسافات"
+  "emailNoSpaces": "يجب ألا يحتوي البريد الإلكتروني على مسافات",
+
+  "signUp": "انضمام",
+  "alreadyHaveAccount": "هل لديك حساب بالفعل؟",
+  "firstName": "الاسم الأول*",
+  "lastName": "الكنية*",
+  "company": "الشركة",
+  "createAccount": "إنشاء حساب",
+  "firstNameRequired": "الاسم الأول مطلوب",
+  "lastNameRequired": "الكنية مطلوبة",
+  "passwordTrimSpaces": "يجب ألا تبدأ أو تنتهي كلمة المرور بمسافات"
+
 }

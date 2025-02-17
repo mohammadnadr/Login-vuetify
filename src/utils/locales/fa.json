@@ -125,5 +125,15 @@
   "emailPlaceholder": "ایمیل را وارد کنید",
   "checkSpam": "فراموش نکنید به پوشه SPAM هم سر بزنید.",
   "sendPasswordResetEmail": "ارسال ایمیل تنظیم مجدد رمز عبور",
-  "emailNoSpaces": "ایمیل نباید شامل فضا باشد"
+  "emailNoSpaces": "ایمیل نباید شامل فضا باشد",
+
+  "signUp": "ثبت نام",
+  "alreadyHaveAccount": "قبلاً حساب دارید؟",
+  "firstName": "نام*",
+  "lastName": "نام خانوادگی*",
+  "company": "شرکت",
+  "createAccount": "ایجاد حساب کاربری",
+  "firstNameRequired": "نام الزامی است",
+  "lastNameRequired": "نام خانوادگی الزامی است",
+  "passwordTrimSpaces": "رمز عبور نباید با فضا شروع یا خاتمه یابد"
 }

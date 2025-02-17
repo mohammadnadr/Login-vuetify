@@ -125,6 +125,17 @@
   "emailPlaceholder": "Enter email address",
   "checkSpam": "Do not forget to check SPAM box.",
   "sendPasswordResetEmail": "Send Password Reset Email",
-  "emailNoSpaces": "E-mail must not contain spaces"
+  "emailNoSpaces": "E-mail must not contain spaces",
+
+  "signUp": "Sign up",
+  "alreadyHaveAccount": "Already have an account?",
+  "firstName": "First Name*",
+  "lastName": "Last Name*",
+  "company": "Company",
+  "createAccount": "Create Account",
+  "firstNameRequired": "First Name is required",
+  "lastNameRequired": "Last Name is required",
+  "passwordTrimSpaces": "Password cannot start or end with spaces"
+
 
 }
